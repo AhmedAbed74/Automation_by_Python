@@ -14,6 +14,7 @@ def check_instance_status():
         sys_status = status['SystemStatus']['Status']
         state = status['InstanceState']['Name']
         print(f"instance {status['InstanceId']} is {state} with instance status {ins_status} and system status {sys_status}")
+        print("####################################")
 
 
 schedule.every(5).seconds.do(check_instance_status)
